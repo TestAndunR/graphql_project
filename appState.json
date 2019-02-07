@@ -1,0 +1,92 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "1f6ff5c7-4931-4c40-9b81-4b4fb12ae89b": {
+        "id": "1f6ff5c7-4931-4c40-9b81-4b4fb12ae89b",
+        "parent": null,
+        "name": "graphql_project",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "c137d4da-991b-430f-a239-23b5cc288035"
+        ],
+        "isRemovable": false,
+        "filePath": "graphql_project"
+      },
+      "c137d4da-991b-430f-a239-23b5cc288035": {
+        "id": "c137d4da-991b-430f-a239-23b5cc288035",
+        "parent": "1f6ff5c7-4931-4c40-9b81-4b4fb12ae89b",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "graphql_project/lambda.js",
+        "code": "const udith = require('sample-layer-udith');\n\n\nexports.handler = function(event, context, callback) {\n    udith.getWeatherByCity(\"galle\")\n        .then(data => console.log(data))\n        .catch(err => console.log(err))\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [],
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [
+            "arn:aws:lambda:us-east-1:318300609668:layer:sample-layer-udith:5"
+          ]
+        },
+        "testCases": {
+          "efbf9450-4188-459b-95ac-de97b018d0dc": {
+            "id": "efbf9450-4188-459b-95ac-de97b018d0dc",
+            "name": "Unnamed event",
+            "functionId": "c137d4da-991b-430f-a239-23b5cc288035",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "1f6ff5c7-4931-4c40-9b81-4b4fb12ae89b",
+    "openFiles": [
+      "c137d4da-991b-430f-a239-23b5cc288035"
+    ],
+    "currentFileId": "c137d4da-991b-430f-a239-23b5cc288035",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "graphql": {
+          "name": "graphql",
+          "version": "14.1.1"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "graphql_project",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1549515895599
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "graphql_project",
+      "url": "https://github.com/TestAndunR/graphql_project"
+    }
+  }
+}
