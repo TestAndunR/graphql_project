@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "graphql_project/lambda.js",
-        "code": "const udith = require('sample-layer-udith');\n\n\nexports.handler = function(event, context, callback) {\n    udith.getWeatherByCity(\"galle\")\n        .then(data => console.log(data))\n        .catch(err => console.log(err))\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "const udith = require('sample-lambda-layer');\n\n\nexports.handler = function(event, context, callback) {\n    udith.getWeatherByCity(\"galle\")\n        .then(data => console.log(data))\n        .catch(err => console.log(err))\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "triggers": [],
         "config": {
           "runtime": "nodejs8.10",
@@ -80,7 +80,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1549515895599
+    "lastSave": 1549516159468
   },
   "VCS_STATE": {
     "provider": "GitHub",

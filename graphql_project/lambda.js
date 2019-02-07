@@ -1,4 +1,4 @@
-const udith = require('sample-layer-udith');
+const udith = require('sample-lambda-layer');
 
 
 exports.handler = function(event, context, callback) {
